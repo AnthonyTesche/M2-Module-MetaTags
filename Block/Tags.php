@@ -36,11 +36,8 @@ class Tags extends Template
     {
         if (is_array($this->page->getStoreId())) {
             if (
-                count($this->page->getStoreId()) > 1 ||
-                (
-                    isset($this->page->getStoreId()[0]) &&
-                    $this->page->getStoreId()[0] === 0
-                )
+                $this->page->getStoreId()[0] == 0 ||
+                count($this->page->getStoreId()) > 1
             ) {
                 return true;
             }
