@@ -17,7 +17,7 @@ Example tag:
 The extension can be installed via `composer`. To proceed, run these commands in your terminal:
 
 ```
-composer require tesche/rangeproducts
+composer require tesche/metatags
 php bin/magento module:enable Tesche_MetaTags
 php bin/magento setup:upgrade
 php bin/magento setup:di:compile
