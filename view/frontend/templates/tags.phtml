@@ -1,0 +1,8 @@
+<?php
+/**
+ * @var \Tesche\MetaTags\Block\Display $block
+ */
+?>
+<?php if($block->showTags()): ?>
+    <link rel="alternate" hreflang="<?= $block->getStoreLanguage() ?>" href="<?= $block->getTagHref() ?>">
+<?php endif; ?>
