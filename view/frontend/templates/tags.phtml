@@ -3,6 +3,6 @@
  * @var \Tesche\MetaTags\Block\Display $block
  */
 ?>
-<?php if($block->showTags()): ?>
-    <link rel="alternate" hreflang="<?= $block->getStoreLanguage() ?>" href="<?= $block->getTagHref() ?>">
-<?php endif; ?>
+<?php foreach ($block->getStoreViewData() as $store) : ?>
+    <link rel="alternate" hreflang="<?= $store['language'] ?>" href="<?= $store['href'] ?>">
+<?php endforeach; ?>
